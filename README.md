@@ -25,7 +25,7 @@ SEW | JavaScript Basics
 ### Acceptance Criteria
 - A function that takes an array of string as a parameter is available.
 - The result is an array consisting of the same strings as the input array, only sorted in lexical order
-- Hint: take a look at the string method: localeCompare()
+- Hint: take a look at the string method: [localeCompare()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare)
 
 ## User Story 4
 *As a developer I want to filter an array, so that only even numbers are in the result.*
