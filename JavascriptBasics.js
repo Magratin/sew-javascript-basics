@@ -1,3 +1,4 @@
+//UserStory 1
 function convert(amount) {
     const coins = [100,50,20,10,5,2,1];
     const table = new Map();
@@ -29,5 +30,34 @@ function convert(amount) {
     }
 
 }
+//UserStory 2
+function rot13(text) {
+    text = text.toString();
+    let result = "";
+    const alphabetMap = new Map([
+        ['A', 'N'], ['B', 'O'], ['C', 'P'], ['D', 'Q'], ['E', 'R'], ['F', 'S'], ['G', 'T'], ['H', 'U'], ['I', 'V'], ['J', 'W'], ['K', 'X'], ['L', 'Y'], ['M', 'Z'],
+        ['N', 'A'], ['O', 'B'], ['P', 'C'], ['Q', 'D'], ['R', 'E'], ['S', 'F'], ['T', 'G'], ['U', 'H'], ['V', 'I'], ['W', 'J'], ['X', 'K'], ['Y', 'L'], ['Z', 'M'],
+        ['a', 'n'], ['b', 'o'], ['c', 'p'], ['d', 'q'], ['e', 'r'], ['f', 's'], ['g', 't'], ['h', 'u'], ['i', 'v'], ['j', 'w'], ['k', 'x'], ['l', 'y'], ['m', 'z'],
+        ['n', 'a'], ['o', 'b'], ['p', 'c'], ['q', 'd'], ['r', 'e'], ['s', 'f'], ['t', 'g'], ['u', 'h'], ['v', 'i'], ['w', 'j'], ['x', 'k'], ['y', 'l'], ['z', 'm']
+    ]);
 
-console.log(convert(192));
+    for (let i = 0; i < text.length; i++) {
+        if (alphabetMap.has(text.charAt(i))) {
+            result = result + alphabetMap.get(text.charAt(i));
+        } else {
+            result = result + text.charAt(i);
+        }
+
+    }
+    return result;
+}
+
+
+
+
+
+
+
+//Tests
+console.log(rot13(123123));
+//console.log(convert(192));
