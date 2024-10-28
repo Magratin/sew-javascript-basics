@@ -79,6 +79,12 @@ function test(fu, arg, exp) {
     }
 }
 
+//UserStory6
+function generate(op) {
+    return function (a, b) {
+        return eval(a + op + b);
+    }
+}
 
 //Tests
 //console.log(rot13(123123));
@@ -87,4 +93,6 @@ function test(fu, arg, exp) {
 //const sortedArray = lexicalorder(inputArray);
 //console.log(sortedArray);
 //console.log(evenarray([1, 2, 3, 4, 5, 6, 1923871294, 7, 8, 9]));
-console.log(test(rot13, 123123, "123123"));
+//console.log(test(rot13, 123123, "123123"));
+const mult = generate('*');
+console.log(mult(3, 4)); // the value is 12 printed on the console
