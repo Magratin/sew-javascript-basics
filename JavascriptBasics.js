@@ -70,6 +70,15 @@ function evenarray(numberarr) {
     return result;
 }
 
+//UserStory5
+function test(fu, arg, exp) {
+    if (fu(arg) === exp) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 
 //Tests
 //console.log(rot13(123123));
@@ -77,4 +86,5 @@ function evenarray(numberarr) {
 //const inputArray = ["banana", "apple", "orange", "grape"];
 //const sortedArray = lexicalorder(inputArray);
 //console.log(sortedArray);
-console.log(evenarray([1, 2, 3, 4, 5, 6, 1923871294, 7, 8, 9]));
+//console.log(evenarray([1, 2, 3, 4, 5, 6, 1923871294, 7, 8, 9]));
+console.log(test(rot13, 123123, "123123"));
