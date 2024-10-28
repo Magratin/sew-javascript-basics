@@ -52,12 +52,17 @@ function rot13(text) {
     return result;
 }
 
+//UserStory3
+function lexicalorder(stringarray) {
+    return stringarray.slice.sort((a, b) => a.localeCompare(b));
 
-
-
+}
 
 
 
 //Tests
-console.log(rot13(123123));
+//console.log(rot13(123123));
 //console.log(convert(192));
+const inputArray = ["banana", "apple", "orange", "grape"];
+const sortedArray = lexicalorder(inputArray);
+console.log(sortedArray);
