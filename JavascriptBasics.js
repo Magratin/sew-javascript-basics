@@ -1,18 +1,18 @@
 //UserStory 1
 function convert(amount) {
-    const coins = [100,50,20,10,5,2,1];
+    const coins = [100, 50, 20, 10, 5, 2, 1];
     const table = new Map();
-    table.set(100,0);
-    table.set(50,0);
-    table.set(20,0);
-    table.set(10,0);
-    table.set(5,0);
-    table.set(2,0);
-    table.set(1,0);
+    table.set(100, 0);
+    table.set(50, 0);
+    table.set(20, 0);
+    table.set(10, 0);
+    table.set(5, 0);
+    table.set(2, 0);
+    table.set(1, 0);
 
     for (const coin of coins) {
         while (amount - coin >= 0) {
-            table.set(coin,table.get(coin) + 1 );
+            table.set(coin, table.get(coin) + 1);
             amount -= coin;
         }
 
@@ -30,6 +30,7 @@ function convert(amount) {
     }
 
 }
+
 //UserStory 2
 function rot13(text) {
     text = text.toString();
@@ -58,11 +59,22 @@ function lexicalorder(stringarray) {
 
 }
 
+//UserStory4
+function evenarray(numberarr) {
+    var result = [];
+    for (const number of numberarr) {
+        if (number % 2 === 0) {
+            result.push(number);
+        }
+    }
+    return result;
+}
 
 
 //Tests
 //console.log(rot13(123123));
 //console.log(convert(192));
-const inputArray = ["banana", "apple", "orange", "grape"];
-const sortedArray = lexicalorder(inputArray);
-console.log(sortedArray);
+//const inputArray = ["banana", "apple", "orange", "grape"];
+//const sortedArray = lexicalorder(inputArray);
+//console.log(sortedArray);
+console.log(evenarray([1, 2, 3, 4, 5, 6, 1923871294, 7, 8, 9]));
